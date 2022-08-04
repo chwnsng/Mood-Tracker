@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      History
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">History</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div>
+    <ion-card *ngFor="let item of itemListData" class="base">
+      <h5><b>{{item.date}}</b></h5>
+      <ion-card background-color=#488aff>
+        <p><b>Morning Mood: </b>{{item.morning_mood}}</p>
+        <p><b>Morning Activity: </b>{{item.morning_activity}}</p>
+      </ion-card>
+      <ion-card>
+        <p><b>Afternoon Mood: </b>{{item.afternoon_mood}}</p>
+        <p><b>Afternoon Activity: </b>{{item.afternoon_activity}}</p>
+      </ion-card>
+      <ion-card>
+        <p><b>Night Mood: </b>{{item.night_mood}}</p>
+        <p><b>Night Activity: </b>{{item.night_activity}}</p>
+      </ion-card>
+      <ion-card>
+        <p><b>Notes: </b>{{item.notes}}</p>
+      </ion-card>
+    </ion-card>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="crescent"
+        loadingText="Loading...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Search
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Search</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-card class="intro">
+    <h5><b>Find patterns</b></h5>
+    <p>discover factors that affect your mental health.</p>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Find: </ion-label>
+      <ion-input [(ngModel)]="keyword" placeholder="Type your keyword..."></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-button type='submit' expand='block' fill='outline' (click)="findData()">submit</ion-button>
+  <div *ngIf='info$ | async as inf'>
+    <ion-card *ngFor = 'let k of inf.result' class='base'>
+      <h5><b>{{k.date}}</b></h5>
+      <ion-card>
+        <p><b>Morning Mood: </b>{{k.morning_mood}}</p>
+        <p><b>Morning Activity: </b>{{k.morning_activity}}</p>
+      </ion-card>
+      <ion-card>
+        <p><b>Afternoon Mood: </b>{{k.afternoon_mood}}</p>
+        <p><b>Afternoon Activity: </b>{{k.afternoon_activity}}</p>
+      </ion-card>
+      <ion-card>
+        <p><b>Night Mood: </b>{{k.night_mood}}</p>
+        <p><b>Night Activity: </b>{{k.night_activity}}</p>
+      </ion-card>
+      <ion-card>
+        <p><b>Notes: </b>{{k.notes}}</p>
+      </ion-card>
+    </ion-card>
+  </div>
+
+</ion-content>

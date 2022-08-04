@@ -1,0 +1,151 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-card class="intro">
+    <h5><b>How are you feeling today?</b></h5>
+    <p>Keep Track of your mental health. Please rank your mood from 1 (horrible) to 5 (fantastic)</p>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Morning Mood</ion-label>
+      <ion-select value="3" okText="OK" cancelText="Cancel" [(ngModel)]="m1">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Morning Activity</ion-label>
+      <ion-select value="3" okText="OK" cancelText="Cancel" [(ngModel)]="a1">
+        <ion-select-option>study</ion-select-option>
+        <ion-select-option>work</ion-select-option>
+        <ion-select-option>exercise</ion-select-option>
+        <ion-select-option>relaxing</ion-select-option>
+        <ion-select-option>nap</ion-select-option>
+        <ion-select-option>art</ion-select-option>
+        <ion-select-option>friends hangout</ion-select-option>
+        <ion-select-option>family time</ion-select-option>
+        <ion-select-option>gaming</ion-select-option>
+        <ion-select-option>reading</ion-select-option>
+        <ion-select-option>watching shows</ion-select-option>
+        <ion-select-option>music</ion-select-option>
+        <ion-select-option>chores</ion-select-option>
+        <ion-select-option>shopping</ion-select-option>
+        <ion-select-option>traveling</ion-select-option>
+        <ion-select-option>doing math</ion-select-option>
+        <ion-select-option>yardwork</ion-select-option>
+        <ion-select-option>sick</ion-select-option>
+        <ion-select-option>cooking</ion-select-option>
+        <ion-select-option>other activities</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Afternoon Mood</ion-label>
+      <ion-select value="3" okText="OK" cancelText="Cancel" [(ngModel)]="m2">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Afternoon Activity</ion-label>
+      <ion-select value="3" okText="OK" cancelText="Cancel" [(ngModel)]="a2">
+        <ion-select-option>study</ion-select-option>
+        <ion-select-option>work</ion-select-option>
+        <ion-select-option>exercise</ion-select-option>
+        <ion-select-option>relaxing</ion-select-option>
+        <ion-select-option>nap</ion-select-option>
+        <ion-select-option>art</ion-select-option>
+        <ion-select-option>friends hangout</ion-select-option>
+        <ion-select-option>family time</ion-select-option>
+        <ion-select-option>gaming</ion-select-option>
+        <ion-select-option>reading</ion-select-option>
+        <ion-select-option>watching shows</ion-select-option>
+        <ion-select-option>music</ion-select-option>
+        <ion-select-option>chores</ion-select-option>
+        <ion-select-option>shopping</ion-select-option>
+        <ion-select-option>traveling</ion-select-option>
+        <ion-select-option>doing math</ion-select-option>
+        <ion-select-option>yardwork</ion-select-option>
+        <ion-select-option>sick</ion-select-option>
+        <ion-select-option>cooking</ion-select-option>
+        <ion-select-option>other activities</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Night Mood</ion-label>
+      <ion-select value="3" okText="OK" cancelText="Cancel" [(ngModel)]="m3">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Night Activity</ion-label>
+      <ion-select value="3" okText="OK" cancelText="Cancel" [(ngModel)]="a3">
+        <ion-select-option>study</ion-select-option>
+        <ion-select-option>work</ion-select-option>
+        <ion-select-option>exercise</ion-select-option>
+        <ion-select-option>relaxing</ion-select-option>
+        <ion-select-option>nap</ion-select-option>
+        <ion-select-option>art</ion-select-option>
+        <ion-select-option>friends hangout</ion-select-option>
+        <ion-select-option>family time</ion-select-option>
+        <ion-select-option>gaming</ion-select-option>
+        <ion-select-option>reading</ion-select-option>
+        <ion-select-option>watching shows</ion-select-option>
+        <ion-select-option>music</ion-select-option>
+        <ion-select-option>chores</ion-select-option>
+        <ion-select-option>shopping</ion-select-option>
+        <ion-select-option>traveling</ion-select-option>
+        <ion-select-option>doing math</ion-select-option>
+        <ion-select-option>yardwork</ion-select-option>
+        <ion-select-option>sick</ion-select-option>
+        <ion-select-option>cooking</ion-select-option>
+        <ion-select-option>other activities</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Notes</ion-label>
+      <ion-input value="-" [(ngModel)]="n"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-button type='submit' expand='block' fill='outline' (click)="showConfirm()">submit</ion-button>
+
+  <div *ngIf='msg | async as m'>
+    <ion-card>
+      Success!
+    </ion-card>
+  </div>
+
+  <!-- <ion-item>
+    <ion-label>Hair Color</ion-label>
+    <ion-select value="brown" okText="OK" cancelText="Cancel" [(ngModel)]="m1">
+      <ion-select-option value="brown">Brown</ion-select-option>
+      <ion-select-option value="blonde">Blonde</ion-select-option>
+      <ion-select-option value="black">Black</ion-select-option>
+      <ion-select-option value="red">Red</ion-select-option>
+    </ion-select>
+  </ion-item> -->
+
+</ion-content>
